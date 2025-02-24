@@ -10,16 +10,17 @@ app.use(express.json());
 const baseurl = "https://api.coindcx.com"
 
 // Place your API key and secret below. You can generate it from the website.
-const key = process.env.API_KEY;
-const secret = process.env.API_SECRET;
+//const key = process.env.API_KEY;
+//const secret = process.env.API_SECRET;
 
 app.post("/signal",async (req,res)=>{
+    const timeStamp = Math.floor(Date.now());
+    console.log(timeStamp);
     console.log(req.body);
     // const signal=req.body.signal;
     // const ticker=req.body.name;
     // const sl=req.body.sl;
     // const tp=req.body.tp;
-    // const timeStamp = Math.floor(Date.now());
 
     // const body = {
     //     "timestamp": timeStamp , // EPOCH timestamp in seconds
